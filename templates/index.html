@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthyBite - Personalized Diet Recommendations</title>
+    <meta name="description" content="Get personalized diet recommendations based on your age, weight, and health conditions." />
+    <meta name="author" content="HealthyBite" />
+    <link rel="stylesheet" href="healthbite/styles/main.css" />
+    <link rel="stylesheet" href="healthbite/styles/header.css" />
+    <link rel="stylesheet" href="healthbite/styles/diet-form.css" />
+    <link rel="stylesheet" href="healthbite/styles/results.css" />
+    <link rel="stylesheet" href="healthbite/styles/transitions.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- <header class="header">
+        <div class="header-logo">
+          <span class="header-logo-text">HealthyBite</span>
+        </div>
+        
+        <nav class="header-nav">
+          <a href="#" class="header-nav-link">Home</a>
+          <a href="#about" class="header-nav-link">About</a>
+          <a href="#contact" class="header-nav-link">Contact</a>
+        </nav>
+      </header> -->
+      
+      <!-- Header Section -->
+    <header>
+      <h1>HealthBite</h1>
+      <nav>
+          <ul>
+              <li><a href="inde.html">Home</a></li>
+              
+              <!-- <li><a href="#">Dietary Recommendations</a></li> -->
+              <li><a href="index.html">Health Guidelines</a></li>
+              <li><a href="http://127.0.0.1:5000">Donate</a></li>
+              <li><a href="front.html">About Us</a></li>
+              <li><a href="http://127.0.0.1:5000/donations">Inventory</a></li>
+          </ul>
+      </nav>
+  </header>
+
+      <main class="main-content container">
+        <div id="form-section">
+          <div class="transition transition-slide-up">
+            <div class="hero-section">
+              <div class="badge">
+                Personalized Nutrition
+              </div>
+              <h1 class="page-title">
+                Your Personalized Diet Recommendation
+              </h1>
+              <h5 style = "color :red ;">
+                DISCLAIMER: The recommendations provided in this prototype are for demonstration purposes only and are not medically verified. Please consult a healthcare professional for accurate medical advice.
+              </h5>
+              <p class="page-description">
+                Get a tailored nutrition plan based on your age, weight, and health conditions.
+              </p>
+            </div>
+          </div>
+          
+          <div class="transition transition-scale-in" style="animation-delay: 300ms;">
+            <div class="card-glass form-container">
+              <form id="diet-form" class="diet-form">
+                <div class="form-group">
+                  <label for="age" class="form-label">Age</label>
+                  <input
+                    id="age"
+                    name="age"
+                    type="number"
+                    class="form-input"
+                    placeholder="Enter your age"
+                    min="18"
+                    max="120"
+                    required
+                  />
+                </div>
+                
+                <div class="form-group">
+                  <label for="weight" class="form-label">Weight (kg)</label>
+                  <input
+                    id="weight"
+                    name="weight"
+                    type="number"
+                    class="form-input"
+                    placeholder="Enter your weight"
+                    min="40"
+                    max="200"
+                    required
+                  />
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Do you have any of the following conditions?</label>
+                  <div class="checkbox-group">
+                    <div class="checkbox-item">
+                      <input
+                        id="diabetes"
+                        type="checkbox"
+                        class="checkbox-input"
+                      />
+                      <label for="diabetes" class="checkbox-label">Diabetes</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                      <input
+                        id="heartDisease"
+                        type="checkbox"
+                        class="checkbox-input"
+                      />
+                      <label for="heartDisease" class="checkbox-label">Heart Disease</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                      <input
+                        id="hypertension"
+                        type="checkbox"
+                        class="checkbox-input"
+                      />
+                      <label for="hypertension" class="checkbox-label">Hypertension</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                      <input
+                        id="obesity"
+                        type="checkbox"
+                        class="checkbox-input"
+                      />
+                      <label for="obesity" class="checkbox-label">Obesity</label>
+                    </div>
+                    <div class="checkbox-item">
+                      <input
+                        id="none"
+                        type="checkbox"
+                        class="checkbox-input"
+                      />
+                      <label for="none" class="checkbox-label">None</label>
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <button type="submit" class="btn-primary form-button">
+                  Get Diet Recommendations
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+        <div id="results-section" class="results-container" style="display: none;">
+          <div class="results-header">
+            <h2 class="results-title">Your Personalized Diet Plan</h2>
+            <p class="results-subtitle">
+              Follow these recommendations for a healthier lifestyle
+            </p>
+          </div>
+          
+          <div class="card">
+            <h3 class="card-title">
+              <span>Foods to Include</span>
+            </h3>
+            <ul id="recommended-foods" class="food-list">
+              <!-- Will be populated by JavaScript -->
+            </ul>
+          </div>
+          
+          <div class="card">
+            <h3 class="card-title">
+              <span>Foods to Avoid</span>
+            </h3>
+            <ul id="avoid-foods" class="food-list">
+              <!-- Will be populated by JavaScript -->
+            </ul>
+          </div>
+          
+          <div class="card">
+            <h3 class="card-title">
+              <span>Sample Meal Plan</span>
+            </h3>
+            
+            <div>
+              <h4>Breakfast Options</h4>
+              <ul id="breakfast-options" class="food-list">
+                <!-- Will be populated by JavaScript -->
+              </ul>
+            </div>
+            
+            <div>
+              <h4>Lunch Options</h4>
+              <ul id="lunch-options" class="food-list">
+                <!-- Will be populated by JavaScript -->
+              </ul>
+            </div>
+            
+            <div>
+              <h4>Dinner Options</h4>
+              <ul id="dinner-options" class="food-list">
+                <!-- Will be populated by JavaScript -->
+              </ul>
+            </div>
+            
+            <div>
+              <h4>Healthy Snacks</h4>
+              <ul id="snack-options" class="food-list">
+                <!-- Will be populated by JavaScript -->
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card">
+            <h3 class="card-title">
+              <span>Health Tips</span>
+            </h3>
+            <ul id="health-tips" class="food-list">
+              <!-- Will be populated by JavaScript -->
+            </ul>
+          </div>
+          
+          <div class="summary-box">
+            <h3 class="summary-title">Summary</h3>
+            <p id="summary-text"></p>
+          </div>
+          
+          <div class="button-group">
+            <button id="reset-button" class="back-button">
+              Start Over
+            </button>
+          </div>
+        </div>
+      </main>
+      
+      <footer class="footer">
+        <p>© <span id="current-year"></span> HealthyBite. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="healthbite/js/main.js"></script>
+    <script src="healthbite/js/dietRecommendations.js"></script>
+  </body>
+</html>

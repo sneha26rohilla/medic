@@ -1,0 +1,166 @@
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Global Styles */
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+    padding: 20px;
+    color: #333;
+}
+
+/* Main container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 3em;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #7f8c8d;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form label {
+    font-size: 1.1em;
+    color: #2c3e50;
+}
+
+form input, form select {
+    padding: 12px;
+    font-size: 1.1em;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+form input:focus, form select:focus {
+    border: 2px solid #27ae60;
+    outline: none;
+}
+
+form button {
+    padding: 12px;
+    font-size: 1.2em;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #2ecc71;
+}
+
+/* Table Styling for Donations List */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    text-align: left;
+}
+
+table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.02);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #27ae60;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #27ae60;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #27ae60;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1.1em;
+    }
+
+    form input, form select, form button {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+}
+
+/* Animation for form container */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

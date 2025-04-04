@@ -1,0 +1,212 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Medicine Donations</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Community Medicine Donations</h1>
+    <p>Help us provide essential medical services to communities in need.</p>
+  </header>
+
+  <main>
+    <section id="donation-section">
+      <h2>Make a Donation</h2>
+      <form action="/donate" method="POST">
+        <label for="amount">Donation Amount ($): </label>
+        <input type="number" id="amount" name="amount" min="1" required>
+
+        <label for="name">Your Name: </label>
+        <input type="text" id="name" name="name" required>
+
+        <button type="submit">Donate</button>
+      </form>
+    </section>
+
+    <section id="donation-status">
+      <h2>Recent Donations</h2>
+      <ul id="donation-list">
+        {% for donation in donations %}
+          <li>{{ donation.name }} donated ${{ donation.amount }}</li>
+        {% else %}
+          <li>No donations yet. Be the first to donate!</li>
+        {% endfor %}
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Community Medicine. All rights reserved.</p>
+  </footer>
+</body>
+</html> -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Unused Medicine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Donate Unused Medicine</h1>
+            <p>Help someone in need by donating your unused, unexpired medicine.</p>
+        </header>
+
+        <form method="POST" id="donation-form">
+            <label for="name">Your Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="medicine-name">Medicine Name:</label>
+            <input type="text" id="medicine-name" name="medicine-name" required>
+
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="date" id="expiry-date" name="expiry-date" required>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <label for="condition">Condition of Medicine:</label>
+            <select id="condition" name="condition" required>
+                <option value="new">New, Unopened</option>
+                <option value="opened">Opened, but Unused</option>
+            </select>
+
+            <button type="submit">Submit Donation</button>
+        </form>
+    </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Unused Medicine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styl.css') }}">
+
+    <style>
+      /* Header section */
+      header {
+          background-color: #00b894;
+          color: white;
+          padding: 20px 0;
+          text-align: center;
+      }
+      header h1 {
+          font-size: 2.5rem;
+          margin-bottom: 10px;
+      }
+      nav ul {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+      }
+      nav ul li {
+          margin: 0 15px;
+      }
+      nav ul li a {
+          color: white;
+          text-decoration: none;
+          font-size: 1.2rem;
+          transition: color 0.3s;
+      }
+      nav ul li a:hover {
+          color: #f39c12;
+      }
+      
+      /* Footer Section */
+      footer {
+            background-color: #00b894;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer .social-icons {
+            margin: 10px 0;
+        }
+        footer .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        footer .social-icons a:hover {
+            color: #f39c12;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+      </style>
+
+
+</head>
+<body>
+
+
+  <header>
+        <h1>HealthBite</h1>
+        <nav>
+            <ul>
+                <li><a href="inde.html">Home</a></li>
+                
+                <!-- <li><a href="#">Dietary Recommendations</a></li> -->
+                <li><a href="index.html">Health Guidelines</a></li>
+                <li><a href="http://127.0.0.1:5000">Donate</a></li>
+                <li><a href="front.html">About Us</a></li>
+                <li><a href="http://127.0.0.1:5000/donations">Inventory</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <header>
+            <h1>Donate Unused Medicine</h1>
+            <p>Your unused medicine can make a difference.</p>
+        </header>
+
+        <form method="POST" id="donation-form">
+            <label for="name">Your Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="medicine-name">Medicine Name:</label>
+            <input type="text" id="medicine-name" name="medicine-name" required>
+
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="date" id="expiry-date" name="expiry-date" required>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <label for="condition">Condition of Medicine:</label>
+            <select id="condition" name="condition" required>
+                <option value="new">New, Unopened</option>
+                <option value="opened">Opened, but Unused</option>
+            </select>
+
+            <button type="submit" class="submit-btn">Submit Donation</button>
+        </form>
+    </div>
+</body>
+</html>

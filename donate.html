@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Medicine Donation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #5cb85c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Community Medicine Donation Portal</h1>
+    <p>Your generous donation helps improve the health of our communities!</p>
+</header>
+
+<div class="container">
+    <h2>Donation Guidelines</h2>
+    <p>Please donate medicines in their original packaging with at least 6 months of shelf life remaining. Refer to the form below to fill out your donation details.</p>
+
+    <form action="/submit-donation" method="post">
+        <div class="form-group">
+            <label for="donorName">Donor Name:</label>
+            <input type="text" id="donorName" name="donorName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="contactInfo">Contact Information (Email & Phone):</label>
+            <input type="text" id="contactInfo" name="contactInfo" required>
+        </div>
+
+        <div class="form-group">
+            <label for="medicineType">Type of Medicine:</label>
+            <select id="medicineType" name="medicineType" required>
+                <option value="prescription">Prescription Medicine</option>
+                <option value="over_the_counter">Over-the-Counter Medicine</option>
+                <option value="medical_supplies">Medical Supplies</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="medicineQuantity">Quantity:</label>
+            <input type="number" id="medicineQuantity" name="medicineQuantity" required>
+        </div>
+
+        <div class="form-group">
+            <label for="expiryDate">Expiry Date:</label>
+            <input type="date" id="expiryDate" name="expiryDate" required>
+        </div>
+
+        <div class="form-group">
+            <label for="medicineCondition">Packaging Condition:</label>
+            <textarea id="medicineCondition" name="medicineCondition" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="additionalNotes">Additional Notes (Optional):</label>
+            <textarea id="additionalNotes" name="additionalNotes" rows="3"></textarea>
+        </div>
+
+        <button type="submit">Submit Donation</button>
+    </form>
+</div>
+
+<div class="footer">
+    <p>&copy; 2025 Community Medicine Donation | All rights reserved.</p>
+    <p>For inquiries, contact us at: <strong>info@donatehealth.org</strong></p>
+</div>
+
+</body>
+</html>

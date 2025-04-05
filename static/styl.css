@@ -8,7 +8,8 @@
 /* Body and Global Styles */
 body {
     font-family: 'Quicksand', sans-serif;
-    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+    background-image: url('bg3.jpg');
+/*     background: linear-gradient(to right, #2c3e50, #bdc3c7); */
     padding: 20px;
     color: #333;
 }

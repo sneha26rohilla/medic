@@ -9,8 +9,9 @@
 /* 
 Body and font settings */
 body {
+    background-image: url('bg.jpg');
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+/*     background-color: #f4f4f9; */
     color: #333;
     line-height: 1.6;
 }
